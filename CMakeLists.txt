@@ -484,8 +484,7 @@ endif()
 
 option(USE_NGHTTP2 "Use Nghttp2 library" OFF)
 if(USE_NGHTTP2)
-  # FIXME Hack
-  # find_package(NGHTTP2 REQUIRED)
+  find_package(NGHTTP2 REQUIRED)
   include_directories(${NGHTTP2_INCLUDE_DIRS})
   list(APPEND CURL_LIBS ${NGHTTP2_LIBRARIES})
 endif()
